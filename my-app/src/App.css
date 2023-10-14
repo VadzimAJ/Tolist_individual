@@ -1,10 +1,11 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  text-align: center;
+  height: 10vmin;
   pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,18 +15,53 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  min-height: 1rem;
+  gap: 1rem;
+  background-color: #282c34;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.todolist{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.todolist-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.todolist-block{
+  border-right:  #282c34 dotted 2px;
+  border-bottom: #282c34 dotted 2px;
+  padding-right: 0.7rem;
+  margin-right: 1rem;
+}
+
+.todolist-task{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+.todolist-task-elem{
+  display: flex;
+  justify-content: space-between;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +72,4 @@
     transform: rotate(360deg);
   }
 }
+
